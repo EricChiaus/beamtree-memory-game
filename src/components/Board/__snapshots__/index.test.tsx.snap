@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Board /> should match the snapshot 1`] = `
+<div>
+  <div>
+    <button
+      data-testid="flippable-card-0"
+    />
+    <button
+      data-testid="flippable-card-1"
+    />
+    <button
+      data-testid="flippable-card-2"
+    />
+    <button
+      data-testid="flippable-card-3"
+    />
+    <button
+      data-testid="flippable-card-4"
+    />
+    <button
+      data-testid="flippable-card-5"
+    />
+    <button
+      data-testid="flippable-card-6"
+    />
+    <button
+      data-testid="flippable-card-7"
+    />
+    <button
+      data-testid="flippable-card-8"
+    />
+    <button
+      data-testid="flippable-card-9"
+    />
+    <button
+      data-testid="flippable-card-10"
+    />
+    <button
+      data-testid="flippable-card-11"
+    />
+    <button
+      data-testid="flippable-card-12"
+    />
+    <button
+      data-testid="flippable-card-13"
+    />
+    <button
+      data-testid="flippable-card-14"
+    />
+    <button
+      data-testid="flippable-card-15"
+    />
+  </div>
+</div>
+`;

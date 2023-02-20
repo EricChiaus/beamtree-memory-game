@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flippable /> should match the snapshot 1`] = `
+<div>
+  <button
+    data-testid="test-id"
+  >
+    Children
+  </button>
+</div>
+`;

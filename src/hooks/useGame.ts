@@ -8,7 +8,7 @@ const useGame = (): Game<FlippableCard> => {
     const last = useRef<FlippableCard | null>(null);
 
     const hasCompleted = useMemo<boolean>(
-        () => items.every(({ isFlipped }) => isFlipped),
+        () => items.every(({ isFlipped }) => !isFlipped),
         [items],
     );
 
@@ -23,12 +23,12 @@ const useGame = (): Game<FlippableCard> => {
             if (isDisabled || !items[index].isFlippable) {
                 return;
             }
-
-            items[index] = flipCard(items[index]);
             setItems([...items]);
+            items[index] = flipCard(items[index]);
             if (last.current) {
                 if (!items[index].isFlipped) {
                     if (last.current.content === items[index].content) {
+                        // Two cards flipped to front side with same content, mark them unflippable
                         items[last.current.index] = {
                             ...items[last.current.index],
                             isFlippable: false,
@@ -36,6 +36,7 @@ const useGame = (): Game<FlippableCard> => {
                         items[index] = { ...items[index], isFlippable: false };
                         setItems([...items]);
                     } else {
+                        // Not same content, set a timer to flip them back
                         items[last.current.index] = {
                             ...items[last.current.index],
                             isFlipped: true,
@@ -50,6 +51,7 @@ const useGame = (): Game<FlippableCard> => {
                 }
                 last.current = null;
             } else {
+                // No card has been flipped yet, save this one.
                 last.current = items[index];
             }
         },

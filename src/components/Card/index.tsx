@@ -1,5 +1,4 @@
 import React, { useContext, useMemo } from 'react';
-import { FlippableCard } from '../../types';
 import GameContext from './../../contexts/GameContext';
 import { CardWrapper } from './index.style';
 
@@ -9,7 +8,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ index }) => {
     const { getItem } = useContext(GameContext);
-    const item = useMemo<FlippableCard | null>(
+
+    const item = useMemo<ReturnType<typeof getItem>>(
         () => getItem(index),
         [index, getItem],
     );

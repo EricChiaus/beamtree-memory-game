@@ -13,11 +13,16 @@ export const Button = styled.button`
     border-color: transparent;
     border-radius: 4px;
     color: white;
-    padding: 24px;
+    padding: 8px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px;
     cursor: pointer;
+    width: 150px;
+`;
+
+export const WinText = styled.span`
+    color: red;
 `;

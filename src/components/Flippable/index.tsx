@@ -2,17 +2,22 @@ import React, { PropsWithChildren } from 'react';
 import { FlippableWrapper } from './index.style';
 
 interface FlippableProps {
+    dataTestId?: string;
     isFlipped: boolean;
-    flip: () => void;
+    onFlip: () => void;
 }
 
 const Flippable: React.FC<PropsWithChildren<FlippableProps>> = ({
     children,
+    dataTestId,
     isFlipped,
-    flip,
+    onFlip,
 }) => {
     return (
-        <FlippableWrapper isFlipped={isFlipped} onClick={flip}>
+        <FlippableWrapper
+            data-testid={dataTestId}
+            isFlipped={isFlipped}
+            onClick={onFlip}>
             {children}
         </FlippableWrapper>
     );

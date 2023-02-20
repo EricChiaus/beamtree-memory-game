@@ -6,5 +6,5 @@ export const BoardWrapper = styled.div`
     grid-template-columns: ${() =>
         new Array(BOARD_WIDTH).fill('148px').join(' ')};
     grid-template-rows: ${() =>
-        new Array(BOARD_HEIGHT).fill('198px').join(' ')};
+        new Array(BOARD_HEIGHT).fill('188px').join(' ')};
 `;
